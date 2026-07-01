@@ -163,12 +163,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   align-items: stretch;
 }
 
-@media (max-width: 600px) {
-  .event-stack-card { flex-direction: column; }
-  .event-visual { flex: 0 0 180px; min-height: 180px; }
-  .event-stack { min-height: 380px; }
-}
-
 .event-stack-card.is-active {
   transform: translateY(0) rotate(0deg) scale(1);
   z-index: 3;
@@ -945,19 +939,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-
-@media (max-width: 480px) {
-  .stats-inner {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .stat {
-    padding: 32px 20px;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-  }
-  .stat:nth-child(2n) { border-right: none; }
-  .stat:nth-child(3), .stat:nth-child(4) { border-bottom: none; }
-  .stat-num { font-size: 2rem; }
 }
 
 .stat {
@@ -2130,21 +2111,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .back-to-top { align-self: start; }
 }
 
-@media (max-width: 600px) {
-  .footer-mega-inner {
-    grid-template-columns: 1fr 1fr;
-    padding: 40px 24px 32px;
-  }
-  .ieee-letters { gap: 8px; flex-wrap: wrap; justify-content: center; }
-  .letter-btn { width: 64px; height: 80px; }
-  .letter-face { font-size: 2rem; }
-  .icon-face svg { width: 34px; height: 34px; }
-  .letter-face-diamond svg { width: 34px; height: 34px; }
-  .contact-hero { padding: 64px 20px 72px; }
-  .contact-heading { font-size: clamp(1.6rem, 7vw, 2.4rem); }
-  .contact-sub { margin-bottom: 40px; font-size: 0.65rem; }
-}
-
 /* ════════════════════════════════════════════════════════
    FOOTER (legacy — kept for reference, not used)
 ════════════════════════════════════════════════════════ */
@@ -2285,116 +2251,123 @@ footer {
    RESPONSIVE
 ════════════════════════════════════════════════════════ */
 @media (max-width: 1024px) {
-  .hero-inner {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; }
   .hero-right { display: none; }
-
-  .about-inner {
-    grid-template-columns: 1fr;
-    gap: 48px;
-  }
-
-  .events-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .event-card-featured {
-    grid-column: span 2;
-  }
-
-  .cta-inner {
-    grid-template-columns: 1fr;
-  }
-
-  .stats-inner {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  .about-inner { grid-template-columns: 1fr; gap: 40px; }
+  .about-visual { display: none; }
+  .events-grid { grid-template-columns: 1fr 1fr; }
+  .event-card-featured { grid-column: span 2; }
+  .cta-inner { grid-template-columns: 1fr; }
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
   .stat:nth-child(2) { border-right: none; }
-  .stat:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.15); }
-  .stat:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.15); border-right: none; }
+  .stat:nth-child(3) { border-top: 1px solid rgba(255,255,255,0.07); }
+  .stat:nth-child(4) { border-top: 1px solid rgba(255,255,255,0.07); border-right: none; }
 }
 
 @media (max-width: 768px) {
-  .nav {
-    top: 10px;
-    width: calc(100vw - 24px);
-  }
-  .nav-inner { padding: 0 16px; }
+  /* Nav */
+  .nav { top: 10px; width: calc(100vw - 24px); border-radius: 16px; }
+  .nav-inner { padding: 0 16px; height: 52px; }
   .nav-links { display: none; }
   .nav-actions { display: none; }
   .nav-hamburger { display: flex; }
+  .nav-hamburger span { background: #ffffff; }
 
-  .hero { padding: 80px 20px 48px; }
+  /* Sections */
   .about { padding: 56px 20px; }
   .events { padding: 56px 20px; }
   .team { padding: 56px 20px; }
   .cta { padding: 56px 20px; }
   footer { padding: 24px 20px; }
 
-  .events-grid {
-    grid-template-columns: 1fr;
-  }
+  /* Hero video */
+  .hero-video-content { padding: 0 20px 36px; }
+  .hero-video-title { font-size: clamp(1.8rem, 6vw, 2.8rem); }
+  .hero-video-sub { font-size: 0.9rem; max-width: 100%; }
+  .hero-video-kicker { font-size: 0.72rem; padding: 6px 12px; margin-bottom: 12px; }
 
+  /* Stats */
+  .stats-inner { grid-template-columns: repeat(2, 1fr); }
+  .stat { padding: 32px 24px; }
+  .stat-num { font-size: 2.2rem; }
+
+  /* Events */
+  .events-inner { padding: 0 16px; }
+  .events-grid { grid-template-columns: 1fr; }
   .event-card-featured { grid-column: span 1; }
+  .section-header { flex-direction: column; align-items: flex-start; gap: 10px; margin-bottom: 32px; }
 
-  .faculty-card {
-    flex-direction: column;
-    text-align: center;
-    padding: 28px 20px;
-    gap: 20px;
-  }
+  /* Event stack card — vertical on mobile */
+  .event-stack-card { flex-direction: column; }
+  .event-visual { flex: 0 0 200px; min-height: 200px; width: 100%; }
+  .event-stack { min-height: 420px; }
+  .event-stack-shell { padding: 12px; }
 
+  /* Faculty */
+  .faculty-card { flex-direction: column; text-align: center; padding: 24px 20px; gap: 16px; }
   .faculty-card::before { display: none; }
-
   .faculty-link { justify-content: center; }
+  .faculty-wrap { margin-bottom: 40px; }
 
-  .team-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
-  }
+  /* Team */
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .team-card { padding: 20px 14px 18px; }
+  .team-avatar { width: 80px; height: 80px; border-radius: 14px; margin-bottom: 12px; }
 
-  .hero-meta {
-    gap: 16px;
-  }
+  /* Sponsors */
+  .sponsors-inner-wrap { grid-template-columns: 1fr; }
+  .sponsors-label-col { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); padding: 36px 20px; }
+  .sponsors-label-heading { font-size: 1.2rem; }
 
-  .stats-inner { grid-template-columns: 1fr 1fr; }
+  /* Contact */
+  .contact-hero { padding: 60px 20px 72px; }
+  .contact-heading { font-size: clamp(1.6rem, 7vw, 2.4rem); }
+  .contact-sub { margin-bottom: 40px; letter-spacing: 0.1em; }
+  .ieee-letters { gap: 8px; flex-wrap: wrap; justify-content: center; }
+  .letter-btn { width: 64px; height: 80px; }
+  .letter-face { font-size: 2rem; }
+  .icon-face svg { width: 32px; height: 32px; }
+  .letter-face-diamond svg { width: 32px; height: 32px; }
 
-  .cta-contact-row {
-    gap: 16px;
-  }
+  /* Footer */
+  .footer-mega-inner { grid-template-columns: 1fr 1fr; gap: 28px; padding: 40px 20px 32px; }
+  .footer-brand-col { grid-column: 1 / -1; }
+  .footer-mega-bottom { padding: 16px 20px; }
+  .back-to-top { display: none; }
 
-  /* Sponsors — stack on tablet */
-  .sponsors-inner-wrap {
-    grid-template-columns: 1fr;
-  }
-
-  .sponsors-label-col {
-    border-right: none;
-    border-bottom: 1px solid rgba(255,255,255,0.07);
-    padding: 40px 24px;
-  }
+  /* CTA */
+  .cta-contact-row { gap: 16px; }
+  .cta-actions { flex-direction: column; width: 100%; }
+  .cta-actions .btn { width: 100%; justify-content: center; }
 }
 
 @media (max-width: 480px) {
-  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-  .team-card { padding: 20px 14px 18px; }
-  .team-avatar { width: 80px; height: 80px; border-radius: 14px; margin-bottom: 12px; }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
-  .cta-actions { flex-direction: column; width: 100%; }
-  .cta-actions .btn { width: 100%; justify-content: center; }
-  .sponsors-label-col { padding: 32px 20px; }
-  .footer-mega-inner { grid-template-columns: 1fr; gap: 28px; padding: 36px 20px 28px; }
-  .back-to-top { display: none; }
-  .section-header { flex-direction: column; align-items: flex-start; gap: 12px; }
-  .hero-video-content { padding: 0 20px 32px; }
-  .hero-video-title { font-size: clamp(1.6rem, 6vw, 2.4rem); }
-  .hero-video-sub { font-size: 0.88rem; }
-  .hero-video-kicker { font-size: 0.72rem; padding: 6px 12px; }
-  .stat-label { font-size: 0.7rem; }
+  /* Nav pill tighter */
+  .nav { width: calc(100vw - 16px); }
+
+  /* Hero */
+  .hero-video-title { font-size: clamp(1.5rem, 7vw, 2rem); }
+  .hero-video-sub { font-size: 0.84rem; }
+
+  /* Stats 2-col */
+  .stat { padding: 28px 16px; }
+  .stat-num { font-size: 1.9rem; }
+  .stat-label { font-size: 0.68rem; }
+
+  /* Events stack shorter image */
+  .event-visual { flex: 0 0 160px; min-height: 160px; }
+  .event-stack { min-height: 380px; }
+  .event-card-body { padding: 16px; }
+  .event-stack-card h3 { font-size: 1rem; }
+
+  /* Team single col on very small */
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Footer single col */
+  .footer-mega-inner { grid-template-columns: 1fr; }
+
+  /* Gallery */
+  .events-gallery-wrap { height: 240px; }
 }
 
 /* ══════════════════════════════════════════════════════════
