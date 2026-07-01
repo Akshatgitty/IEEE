@@ -2265,6 +2265,12 @@ footer {
 }
 
 @media (max-width: 768px) {
+  /* Event stack — disable the offset stacking on mobile, just stack flat */
+  .event-stack-card.is-next { transform: translateY(6px) scale(0.98); }
+  .event-stack-card.is-back  { transform: translateY(10px) scale(0.96); }
+  .event-scroll-outer { overflow: hidden; }
+  .event-stack-shell { overflow: hidden; }
+
   /* Nav */
   .nav { top: 10px; width: calc(100vw - 24px); border-radius: 16px; }
   .nav-inner { padding: 0 16px; height: 52px; }
