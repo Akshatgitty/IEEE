@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IEEE Student Branch | SRM University AP</title>
+  <meta name="description" content="IEEE Student Branch at SRM University AP — Innovating, connecting, and inspiring the next generation of engineers and technologists in Amaravati, Andhra Pradesh." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       NAVBAR
+  ═══════════════════════════════════ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-brand" aria-label="IEEE SRM University AP Home">
+        <div class="nav-brand-mark" aria-hidden="true">
+          <img src="logo.webp" alt="IEEE logo" />
+        </div>
+        <div>
+          <div class="nav-brand-name">Student Branch</div>
+          <div class="nav-brand-sub">SRM University AP</div>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#events"   id="nav-events">Events</a></li>
+        <li><a href="#team"     id="nav-team">Team</a></li>
+        <li><a href="#sponsors" id="nav-sponsors">Sponsors</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#cta" class="btn btn-ghost">Contact</a>
+        <a href="https://www.ieee.org/membership/join/index.html" target="_blank" rel="noopener" class="btn btn-primary" id="nav-join">
+          Join IEEE
+        </a>
+      </div>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" style="display:none; position:fixed; top:64px; left:0; right:0; background:linear-gradient(135deg,#05070b,#111418); border-bottom:1px solid rgba(255,255,255,0.08); z-index:199; padding:12px 20px 20px; backdrop-filter:blur(16px);">
+    <ul style="list-style:none; display:flex; flex-direction:column; gap:4px;">
+      <li><a href="#events"   style="display:block;padding:10px 12px;border-radius:8px;font-size:0.9rem;font-weight:500;color:rgba(255,255,255,0.8);" onclick="closeMobile()">Events</a></li>
+      <li><a href="#team"     style="display:block;padding:10px 12px;border-radius:8px;font-size:0.9rem;font-weight:500;color:rgba(255,255,255,0.8);" onclick="closeMobile()">Team</a></li>
+      <li><a href="#sponsors" style="display:block;padding:10px 12px;border-radius:8px;font-size:0.9rem;font-weight:500;color:rgba(255,255,255,0.8);" onclick="closeMobile()">Sponsors</a></li>
+      <li style="margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,0.08);">
+        <a href="https://www.ieee.org/membership/join/index.html" target="_blank" class="btn btn-primary" style="width:100%;justify-content:center;font-size:0.9rem;">Join IEEE</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════
+       HERO
+  ═══════════════════════════════════ -->
+  <main>
+    <section id="hero" class="hero hero-video-hero" aria-label="Hero section">
+      <video class="hero-video" autoplay muted loop playsinline poster="">
+        <source src="cpu.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-video-overlay" aria-hidden="true"></div>
+
+      <div class="hero-video-content hero-video-content-bottom-left">
+        <div class="hero-video-copy">
+          <p class="hero-video-kicker">IEEE Student Branch</p>
+          <h1 class="hero-video-title">IEEE SRM University AP</h1>
+          <p class="hero-video-sub">A student-led community advancing innovation, research, and technical growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         STATS STRIP
+    ═══════════════════════════════════ -->
+    <section id="stats" class="stats" aria-label="Key statistics">
+      <div class="stats-inner">
+        <div class="stat" data-reveal>
+          <div class="stat-num" data-counter="500" data-suffix="+">—</div>
+          <div class="stat-label">Active Members</div>
+        </div>
+        <div class="stat" data-reveal data-delay="1">
+          <div class="stat-num" data-counter="25" data-suffix="+">—</div>
+          <div class="stat-label">Events Hosted</div>
+        </div>
+        <div class="stat" data-reveal data-delay="2">
+          <div class="stat-num" data-counter="10" data-suffix="+">—</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div class="stat" data-reveal data-delay="3">
+          <div class="stat-num" data-counter="8" data-suffix="">—</div>
+          <div class="stat-label">Technical Chapters</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         EVENTS
+    ═══════════════════════════════════ -->
+    <section id="events" class="events" aria-label="Events">
+      <div class="events-inner">
+        <div class="section-header" data-reveal>
+          <div>
+            <div class="section-kicker">Upcoming Events</div>
+            <h2 class="section-heading" style="margin-bottom:0;">Where ideas collide</h2>
+          </div>
+          <a href="#" class="section-link" id="events-see-all">View all events →</a>
+        </div><!-- /section-header -->
+      </div><!-- /events-inner -->
+
+      <div class="events-inner">
+        <!-- Sticky scroll wrapper -->
+        <div class="event-scroll-outer" id="eventScrollOuter">
+          <div class="event-scroll-sticky">
+            <div class="event-stack-shell">
+              <div class="event-stack" id="eventStack" aria-label="Upcoming IEEE events stack">
+                <article class="event-stack-card is-active" data-event-card data-event-title="Genesis Hackathon 2026" data-event-description="A three-day innovation sprint where students come together to design practical solutions for AI, sustainability, and emerging technology.">
+                  <div class="event-visual">
+                    <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80" alt="Students collaborating at a hackathon" />
+                  </div>
+                  <div class="event-card-body">
+                    <div class="event-card-top">
+                      <span class="event-badge">Hackathon</span>
+                      <span class="event-date">Feb 2026</span>
+                    </div>
+                    <h3>Genesis Hackathon 2026</h3>
+                    <p>A three-day innovation sprint where students come together to design practical solutions for AI, sustainability, and emerging technology.</p>
+                  </div>
+                </article>
+
+                <article class="event-stack-card" data-event-card data-event-title="Research Podcast Series" data-event-description="Thoughtful conversations with researchers and student innovators about the ideas shaping engineering, science, and leadership.">
+                  <div class="event-visual">
+                    <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=900&q=80" alt="Podcast recording studio setup" />
+                  </div>
+                  <div class="event-card-body">
+                    <div class="event-card-top">
+                      <span class="event-badge">Talk Series</span>
+                      <span class="event-date">Mar 2026</span>
+                    </div>
+                    <h3>Research Podcast Series</h3>
+                    <p>Thoughtful conversations with researchers and student innovators about the ideas shaping engineering, science, and leadership.</p>
+                  </div>
+                </article>
+
+                <article class="event-stack-card" data-event-card data-event-title="DKMS Blood Drive 2026" data-event-description="A community-led initiative that encourages students to give back, support a meaningful cause, and strengthen social impact beyond campus.">
+                  <div class="event-visual">
+                    <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80" alt="Community volunteers helping at a donation drive" />
+                  </div>
+                  <div class="event-card-body">
+                    <div class="event-card-top">
+                      <span class="event-badge">Community</span>
+                      <span class="event-date">Apr 2026</span>
+                    </div>
+                    <h3>DKMS Blood Drive 2026</h3>
+                    <p>A community-led initiative that encourages students to give back, support a meaningful cause, and strengthen social impact beyond campus.</p>
+                  </div>
+                </article>
+
+                <article class="event-stack-card" data-event-card data-event-title="AI for Social Good" data-event-description="A hands-on session where students explore responsible AI practices and learn how technology can solve real-world problems.">
+                  <div class="event-visual">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80" alt="Engineering and technology workshop" />
+                  </div>
+                  <div class="event-card-body">
+                    <div class="event-card-top">
+                      <span class="event-badge">Workshop</span>
+                      <span class="event-date">May 2026</span>
+                    </div>
+                    <h3>AI for Social Good</h3>
+                    <p>A hands-on session where students explore responsible AI practices and learn how technology can solve real-world problems.</p>
+                  </div>
+                </article>
+
+                <article class="event-stack-card" data-event-card data-event-title="Women in Engineering Panel" data-event-description="An inspiring discussion featuring accomplished professionals and emerging leaders sharing perspectives on growth, opportunity, and impact.">
+                  <div class="event-visual">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Professional panel discussion with audience" />
+                  </div>
+                  <div class="event-card-body">
+                    <div class="event-card-top">
+                      <span class="event-badge">Panel</span>
+                      <span class="event-date">Jun 2026</span>
+                    </div>
+                    <h3>Women in Engineering Panel</h3>
+                    <p>An inspiring discussion featuring accomplished professionals and emerging leaders sharing perspectives on growth, opportunity, and impact.</p>
+                  </div>
+                </article>
+              </div><!-- /event-stack -->
+            </div><!-- /event-stack-shell -->
+
+            <!-- Progress dots -->
+            <div class="event-dots" id="eventDots" aria-label="Event progress">
+              <span class="event-dot is-active" data-dot="0"></span>
+              <span class="event-dot" data-dot="1"></span>
+              <span class="event-dot" data-dot="2"></span>
+              <span class="event-dot" data-dot="3"></span>
+              <span class="event-dot" data-dot="4"></span>
+            </div>
+
+            <!-- Scroll hint -->
+            <p class="event-scroll-hint">Scroll to explore events ↓</p>
+          </div><!-- /event-scroll-sticky -->
+        </div><!-- /event-scroll-outer -->
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         TEAM — EXECUTIVE COMMITTEE
+    ═══════════════════════════════════ -->
+    <section id="team" class="team" aria-label="Executive Committee">
+      <div class="team-inner">
+        <div class="section-header" data-reveal>
+          <div>
+            <div class="section-kicker">Leadership</div>
+            <h2 class="section-heading" style="margin-bottom:0;">Executive Committee</h2>
+          </div>
+        </div>
+        <p class="section-body" style="max-width:560px;margin-bottom:48px;color:rgba(255,255,255,0.6);" data-reveal data-delay="1">
+          Meet the distinguished leadership driving the IEEE Student Branch at SRM University AP — guided by research excellence, industry collaboration, and engineering precision.
+        </p>
+
+        <!-- Faculty -->
+        <div class="faculty-wrap">
+          <div class="faculty-card" data-reveal id="faculty-card">
+            <div class="faculty-photo" aria-label="Dr. Pradyut Kumar Sanki">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" alt="Dr. Pradyut Kumar Sanki" />
+            </div>
+            <div class="faculty-info">
+              <div class="faculty-badge">
+                <span class="badge badge-blue">Branch Counsellor</span>
+              </div>
+              <div class="faculty-name">Dr. Pradyut Kumar Sanki</div>
+              <div class="faculty-dept">
+                Associate Professor, Department of Electronics &amp; Communication Engineering<br/>
+                SRM University–AP, Amaravati
+              </div>
+              <a href="#" class="faculty-link" id="faculty-profile">
+                View faculty profile →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Students -->
+        <div class="team-sub-header" data-reveal>
+          <div class="section-kicker" style="margin-bottom:0;">Student Branch Officers</div>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card" data-reveal data-delay="1" id="officer-chair">
+            <div class="team-avatar" aria-label="Sri Vibhu Gottipati">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=400&q=80" alt="Sri Vibhu Gottipati" />
+            </div>
+            <div class="team-name">Sri Vibhu Gottipati</div>
+            <div class="team-role">Chair Person</div>
+            <div class="team-type">Undergraduate Student</div>
+            <div class="team-links">
+              <a href="#" class="team-link" aria-label="LinkedIn">in</a>
+              <a href="#" class="team-link" aria-label="Website">↗</a>
+            </div>
+          </div>
+
+          <div class="team-card" data-reveal data-delay="2" id="officer-vicechair">
+            <div class="team-avatar" aria-label="Kartikeya Mangu">
+              <img src="https://images.unsplash.com/photo-1504593811423-6dd665756598?auto=format&fit=crop&w=400&q=80" alt="Kartikeya Mangu" />
+            </div>
+            <div class="team-name">Kartikeya Mangu</div>
+            <div class="team-role">Vice Chair Person</div>
+            <div class="team-type">Undergraduate Student</div>
+            <div class="team-links">
+              <a href="#" class="team-link" aria-label="LinkedIn">in</a>
+              <a href="#" class="team-link" aria-label="Website">↗</a>
+            </div>
+          </div>
+
+          <div class="team-card" data-reveal data-delay="3" id="officer-webmaster">
+            <div class="team-avatar" aria-label="Ritvik Pinjala">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Ritvik Pinjala" />
+            </div>
+            <div class="team-name">Ritvik Pinjala</div>
+            <div class="team-role">Web Master & Internal Affairs</div>
+            <div class="team-type">Undergraduate Student</div>
+            <div class="team-links">
+              <a href="#" class="team-link" aria-label="LinkedIn">in</a>
+              <a href="#" class="team-link" aria-label="Website">↗</a>
+            </div>
+          </div>
+
+          <div class="team-card" data-reveal data-delay="1" id="officer-treasurer">
+            <div class="team-avatar" aria-label="Treasurer">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=400&q=80" alt="Treasurer" />
+            </div>
+            <div class="team-name">Officer Name</div>
+            <div class="team-role">Treasurer</div>
+            <div class="team-type">Undergraduate Student</div>
+            <div class="team-links">
+              <a href="#" class="team-link" aria-label="LinkedIn">in</a>
+              <a href="#" class="team-link" aria-label="Website">↗</a>
+            </div>
+          </div>
+
+          <div class="team-card" data-reveal data-delay="2" id="officer-secretary">
+            <div class="team-avatar" aria-label="Secretary">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Secretary" />
+            </div>
+            <div class="team-name">Officer Name</div>
+            <div class="team-role">Secretary</div>
+            <div class="team-type">Undergraduate Student</div>
+            <div class="team-links">
+              <a href="#" class="team-link" aria-label="LinkedIn">in</a>
+              <a href="#" class="team-link" aria-label="Website">↗</a>
+            </div>
+          </div>
+
+          <div class="team-card" data-reveal data-delay="3" id="officer-pr">
+            <div class="team-avatar" aria-label="PR Head">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="PR Head" />
+            </div>
+            <div class="team-name">Officer Name</div>
+            <div class="team-role">PR & Outreach Head</div>
+            <div class="team-type">Undergraduate Student</div>
+            <div class="team-links">
+              <a href="#" class="team-link" aria-label="LinkedIn">in</a>
+              <a href="#" class="team-link" aria-label="Website">↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════
+         SPONSORS
+    ═══════════════════════════════════ -->
+    <section id="sponsors" class="sponsors" aria-label="Sponsors and Partners">
+      <div class="sponsors-inner-wrap">
+
+        <!-- Left: label column -->
+        <div class="sponsors-label-col" data-reveal>
+          <span class="sponsors-eyebrow">Our partners</span>
+          <p class="sponsors-label-heading">Trusted by companies that shape the future of technology.</p>
+          <p class="sponsors-label-sub">From global enterprises to emerging innovators, our sponsors make it possible.</p>
+        </div>
+
+        <!-- Right: scrolling names -->
+        <div class="sponsors-scroll-col">
+
+          <!-- Row 1 -->
+          <div class="sponsors-track-wrap">
+            <div class="sponsors-track" id="sponsorTrack" aria-label="Primary sponsors">
+              <span class="sponsor-chip sponsor-chip-gold">Qualcomm</span>
+              <span class="sponsor-chip sponsor-chip-gold">Texas Instruments</span>
+              <span class="sponsor-chip sponsor-chip-gold">Cisco</span>
+              <span class="sponsor-chip sponsor-chip-gold">Intel</span>
+              <span class="sponsor-chip sponsor-chip-gold">NVIDIA</span>
+              <span class="sponsor-chip sponsor-chip-gold">Bosch</span>
+              <span class="sponsor-chip sponsor-chip-gold">ARM</span>
+              <span class="sponsor-chip sponsor-chip-gold">Luna Node</span>
+              <!-- duplicate -->
+              <span class="sponsor-chip sponsor-chip-gold">Qualcomm</span>
+              <span class="sponsor-chip sponsor-chip-gold">Texas Instruments</span>
+              <span class="sponsor-chip sponsor-chip-gold">Cisco</span>
+              <span class="sponsor-chip sponsor-chip-gold">Intel</span>
+              <span class="sponsor-chip sponsor-chip-gold">NVIDIA</span>
+              <span class="sponsor-chip sponsor-chip-gold">Bosch</span>
+              <span class="sponsor-chip sponsor-chip-gold">ARM</span>
+              <span class="sponsor-chip sponsor-chip-gold">Luna Node</span>
+            </div>
+          </div>
+
+          <!-- Row 2 (reverse) -->
+          <div class="sponsors-track-wrap">
+            <div class="sponsors-track sponsors-track-reverse" aria-label="Supporting sponsors">
+              <span class="sponsor-chip sponsor-chip-silver">TrueVendor</span>
+              <span class="sponsor-chip sponsor-chip-silver">Pleroma</span>
+              <span class="sponsor-chip sponsor-chip-silver">AirVPN</span>
+              <span class="sponsor-chip sponsor-chip-silver">Terrathread</span>
+              <span class="sponsor-chip sponsor-chip-silver">PapersOwl</span>
+              <span class="sponsor-chip sponsor-chip-silver">Value Marketing</span>
+              <span class="sponsor-chip sponsor-chip-silver">Mini Tool</span>
+              <span class="sponsor-chip sponsor-chip-silver">BestVPN</span>
+              <!-- duplicate -->
+              <span class="sponsor-chip sponsor-chip-silver">TrueVendor</span>
+              <span class="sponsor-chip sponsor-chip-silver">Pleroma</span>
+              <span class="sponsor-chip sponsor-chip-silver">AirVPN</span>
+              <span class="sponsor-chip sponsor-chip-silver">Terrathread</span>
+              <span class="sponsor-chip sponsor-chip-silver">PapersOwl</span>
+              <span class="sponsor-chip sponsor-chip-silver">Value Marketing</span>
+              <span class="sponsor-chip sponsor-chip-silver">Mini Tool</span>
+              <span class="sponsor-chip sponsor-chip-silver">BestVPN</span>
+            </div>
+          </div>
+
+          <!-- Row 3 -->
+          <div class="sponsors-track-wrap">
+            <div class="sponsors-track" aria-label="Community partners">
+              <span class="sponsor-chip">Fediverse Network</span>
+              <span class="sponsor-chip">HackClub</span>
+              <span class="sponsor-chip">XY Ventures</span>
+              <span class="sponsor-chip">OpenNet</span>
+              <span class="sponsor-chip">WirelessWorld</span>
+              <span class="sponsor-chip">RoboSRM</span>
+              <span class="sponsor-chip">VR Nexus</span>
+              <span class="sponsor-chip">Firestick Tricks</span>
+              <!-- duplicate -->
+              <span class="sponsor-chip">Fediverse Network</span>
+              <span class="sponsor-chip">HackClub</span>
+              <span class="sponsor-chip">XY Ventures</span>
+              <span class="sponsor-chip">OpenNet</span>
+              <span class="sponsor-chip">WirelessWorld</span>
+              <span class="sponsor-chip">RoboSRM</span>
+              <span class="sponsor-chip">VR Nexus</span>
+              <span class="sponsor-chip">Firestick Tricks</span>
+            </div>
+          </div>
+
+        </div><!-- /sponsors-scroll-col -->
+      </div><!-- /sponsors-inner-wrap -->
+    </section>
+
+    <!-- ═══════════════════════════════════
+         GET IN TOUCH — Letter hover section
+    ═══════════════════════════════════ -->
+    <section id="cta" class="contact-hero" aria-label="Get in touch">
+      <div class="contact-hero-inner">
+        <h2 class="contact-heading">GET IN TOUCH</h2>
+        <p class="contact-sub">HOVER OR TAP ON ANY LETTER TO CONNECT</p>
+
+        <div class="ieee-letters" role="list">
+
+          <!-- I → Instagram -->
+          <a href="https://instagram.com/ieee_srmap" class="letter-btn" target="_blank" rel="noopener" aria-label="Follow us on Instagram" role="listitem">
+            <span class="letter-face" aria-hidden="true">I</span>
+            <span class="icon-face" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5"/>
+                <circle cx="12" cy="12" r="5"/>
+                <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/>
+              </svg>
+            </span>
+          </a>
+
+          <!-- E → WhatsApp -->
+          <a href="https://wa.me/message/IEEESRMAP" class="letter-btn" target="_blank" rel="noopener" aria-label="Message us on WhatsApp" role="listitem">
+            <span class="letter-face" aria-hidden="true">E</span>
+            <span class="icon-face" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/>
+              </svg>
+            </span>
+          </a>
+
+          <!-- E → Email -->
+          <a href="mailto:ieee@srmap.edu.in" class="letter-btn" aria-label="Email us" role="listitem">
+            <span class="letter-face" aria-hidden="true">E</span>
+            <span class="icon-face" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <polyline points="2,6 12,14 22,6"/>
+              </svg>
+            </span>
+          </a>
+
+          <!-- E → LinkedIn -->
+          <a href="https://linkedin.com/company/ieee-srmap" class="letter-btn" target="_blank" rel="noopener" aria-label="Connect on LinkedIn" role="listitem">
+            <span class="letter-face" aria-hidden="true">E</span>
+            <span class="icon-face" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="3"/>
+                <line x1="7" y1="11" x2="7" y2="17"/>
+                <line x1="7" y1="7" x2="7" y2="8"/>
+                <path d="M11 17v-5c0-1 1-2 2.5-2s2.5 1 2.5 2v5"/>
+                <line x1="11" y1="11" x2="11" y2="17"/>
+              </svg>
+            </span>
+          </a>
+
+          <!-- ◆ → Globe/Website -->
+          <a href="https://ieeesrm.vercel.app" class="letter-btn" target="_blank" rel="noopener" aria-label="Visit our website" role="listitem">
+            <span class="letter-face letter-face-diamond" aria-hidden="true">
+              <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.4">
+                <rect x="8" y="8" width="24" height="24" rx="4" transform="rotate(45 20 20)"/>
+                <line x1="20" y1="2" x2="20" y2="38"/>
+                <line x1="2" y1="20" x2="38" y2="20"/>
+              </svg>
+            </span>
+            <span class="icon-face" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+              </svg>
+            </span>
+          </a>
+
+        </div><!-- /ieee-letters -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════
+       FOOTER — multi-column
+  ═══════════════════════════════════ -->
+  <footer role="contentinfo" class="footer-mega">
+
+    <div class="footer-mega-inner">
+
+      <!-- Brand column -->
+      <div class="footer-brand-col">
+        <div class="footer-brand-wordmark">IEEE</div>
+        <p class="footer-brand-desc">The IEEE Student Branch at SRM University-AP enhances the student learning experience through technical and social events, offering access to valuable membership benefits. It also provides vital networking opportunities with global peers, academicians, and professional engineers.</p>
+      </div>
+
+      <!-- Links col 1 -->
+      <div class="footer-link-col">
+        <div class="footer-link-col-title">BUILD ON IEEE</div>
+        <ul>
+          <li><a href="#">Developer Docs</a></li>
+          <li><a href="#">Mainnet Core Hub</a></li>
+          <li><a href="#">Testnet Bridge</a></li>
+          <li><a href="#">Block Explorer</a></li>
+          <li><a href="#">System Registry</a></li>
+        </ul>
+      </div>
+
+      <!-- Links col 2 -->
+      <div class="footer-link-col">
+        <div class="footer-link-col-title">CONNECT PORTALS</div>
+        <ul>
+          <li><a href="#">Discord Community</a></li>
+          <li><a href="#">Twitter / X Feed</a></li>
+          <li><a href="#">Telegram Canals</a></li>
+          <li><a href="#">Github Org</a></li>
+          <li><a href="#">Brand Press Kit</a></li>
+        </ul>
+      </div>
+
+      <!-- Links col 3 -->
+      <div class="footer-link-col">
+        <div class="footer-link-col-title">IEEE STUDENT BRANCH</div>
+        <ul>
+          <li><a href="#">Events Registry</a></li>
+          <li><a href="#">Committee Council</a></li>
+          <li><a href="#">Strategic Grants</a></li>
+          <li><a href="#">The Blueprint Spec</a></li>
+          <li><a href="#">Security Ethics</a></li>
+        </ul>
+      </div>
+
+      <!-- Back to top -->
+      <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    </div><!-- /footer-mega-inner -->
+
+    <div class="footer-mega-bottom">
+      <span>© 2026 IEEE Student Branch, SRM University AP. All rights reserved.</span>
+    </div>
+
+  </footer>
+
+  <!-- CircularGallery — ES module, loads ogl from CDN -->
+  <script src="script.js">
+</script>
+</body>
+</html>
